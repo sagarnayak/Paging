@@ -1,5 +1,7 @@
 @file:Suppress("unused")
 
+package com.sagar.android.paging.model
+
 /*
 event class that will contain the result along with the helper values and methods
 so that we can determine if this data is already read or not.

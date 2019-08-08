@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.sagar.android.paging.R
 import com.sagar.android.paging.databinding.ActivityMainBinding
 import com.sagar.android.paging.model.News
+import com.sagar.android.paging.ui.mainactivity.adapter.NewsAdapter
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
 import org.kodein.di.generic.instance
@@ -21,6 +22,7 @@ class MainActivity : AppCompatActivity(), KodeinAware {
     private val viewModelProvider: MainActivityViewModelProvider by instance()
     private lateinit var viewModel: MainActivityViewModel
     private lateinit var binding: ActivityMainBinding
+    private lateinit var adapter: NewsAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,6 +43,8 @@ class MainActivity : AppCompatActivity(), KodeinAware {
 
     private fun setUpList() {
         binding.recyclerView.layoutManager = LinearLayoutManager(this)
+        adapter = NewsAdapter()
+        binding.recyclerView.adapter = adapter
     }
 
     private fun bindToViewModel() {
@@ -48,7 +52,7 @@ class MainActivity : AppCompatActivity(), KodeinAware {
             this,
             object : Observer<PagedList<News>> {
                 override fun onChanged(t: PagedList<News>?) {
-
+                    adapter.submitList(t)
                 }
             }
         )

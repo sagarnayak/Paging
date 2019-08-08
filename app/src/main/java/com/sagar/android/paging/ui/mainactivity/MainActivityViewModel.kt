@@ -21,9 +21,9 @@ class MainActivityViewModel(
 
     init {
         val config = PagedList.Config.Builder()
-            .setPageSize(5)
+            .setPageSize(34)
             .setInitialLoadSizeHint(2)
-            .setEnablePlaceholders(false)
+            .setEnablePlaceholders(true)
             .build()
         newsPagedListDataSource = newsDataSourceFactory.mutableLiveData
 

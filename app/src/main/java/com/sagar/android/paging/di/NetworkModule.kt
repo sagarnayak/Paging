@@ -1,4 +1,4 @@
-package com.sagar.android.paging
+package com.sagar.android.paging.di
 
 import com.jakewharton.retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import com.sagar.android.logutilmaster.LogUtil

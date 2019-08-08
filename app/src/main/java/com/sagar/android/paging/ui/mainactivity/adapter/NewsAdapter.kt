@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.sagar.android.paging.databinding.NewsListItemBinding
 import com.sagar.android.paging.model.News
 
-class NewsAdapter(private val newsList: MutableList<News>) :
+class NewsAdapter :
     PagedListAdapter<News, NewsAdapter.ViewHolder>(
         object : DiffUtil.ItemCallback<News>() {
             override fun areItemsTheSame(oldItem: News, newItem: News): Boolean {
@@ -32,7 +32,11 @@ class NewsAdapter(private val newsList: MutableList<News>) :
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        holder.bind(newsList[position])
+        getItem(position)?.let {
+            holder.bind(
+                it
+            )
+        }
     }
 
 
