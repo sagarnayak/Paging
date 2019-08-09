@@ -4,12 +4,15 @@ import androidx.paging.PageKeyedDataSource
 import com.sagar.android.logutilmaster.LogUtil
 import com.sagar.android.paging.model.News
 import com.sagar.android.paging.model.Source
-import java.util.logging.Handler
 
 class NewsDataSource(
     private val repository: Repository,
     private val logUtil: LogUtil
 ) : PageKeyedDataSource<Int, News>() {
+
+    fun refreshData() {
+        invalidate()
+    }
 
     override fun loadInitial(params: LoadInitialParams<Int>, callback: LoadInitialCallback<Int, News>) {
         //call the api here
