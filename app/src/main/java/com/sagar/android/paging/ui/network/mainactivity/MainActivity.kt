@@ -1,4 +1,4 @@
-package com.sagar.android.paging.ui.mainactivity
+package com.sagar.android.paging.ui.network.mainactivity
 
 import android.os.Bundle
 import android.os.Handler
@@ -13,7 +13,7 @@ import com.sagar.android.logutilmaster.LogUtil
 import com.sagar.android.paging.R
 import com.sagar.android.paging.databinding.ActivityMainBinding
 import com.sagar.android.paging.model.News
-import com.sagar.android.paging.ui.mainactivity.adapter.NewsAdapter
+import com.sagar.android.paging.ui.network.mainactivity.adapter.NewsAdapter
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
 import org.kodein.di.generic.instance

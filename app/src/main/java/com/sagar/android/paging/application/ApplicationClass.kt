@@ -6,7 +6,7 @@ import com.sagar.android.logutilmaster.LogUtil
 import com.sagar.android.paging.core.KeyWordsAndConstants
 import com.sagar.android.paging.di.NetworkModule
 import com.sagar.android.paging.repository.Repository
-import com.sagar.android.paging.ui.mainactivity.MainActivityViewModelProvider
+import com.sagar.android.paging.ui.network.mainactivity.MainActivityViewModelProvider
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.x.BuildConfig

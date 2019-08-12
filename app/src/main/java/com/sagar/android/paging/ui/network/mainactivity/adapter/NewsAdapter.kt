@@ -1,4 +1,4 @@
-package com.sagar.android.paging.ui.mainactivity.adapter
+package com.sagar.android.paging.ui.network.mainactivity.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

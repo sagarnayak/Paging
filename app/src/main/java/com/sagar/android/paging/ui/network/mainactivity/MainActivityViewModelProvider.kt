@@ -1,4 +1,4 @@
-package com.sagar.android.paging.ui.mainactivity
+package com.sagar.android.paging.ui.network.mainactivity
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
